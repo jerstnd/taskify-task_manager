@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.landingpage{
+    width: 100%;
+}
+
+.landingpage h1{
+    font-size: 100px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.landingpage h1 p{
+    font-size: 60px;
+    margin-left: 10%;
+}
+
+.todoform{
+    margin-right: 10px;
+}
