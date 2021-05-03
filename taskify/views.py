@@ -1,11 +1,14 @@
-from flask import Blueprint, render_template, request
-from flask_login import login_required, current_user
+from flask import Blueprint, render_template, request, redirect, url_for
+from flask_login import login_required, current_user, login_manager
 
 views = Blueprint('views', __name__)
 
 @views.route('/')
 def landing_page():
-    return render_template('landingpage.html', user=current_user)
+    if current_user.is_authenticated:
+        return redirect(url_for('views.home'))
+    else:
+        return render_template('landingpage.html', user=current_user)
 
 @views.route('/home', methods=['GET', 'POST'])
 @login_required
