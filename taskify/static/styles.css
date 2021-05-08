@@ -25,3 +25,16 @@
 .todoform{
     margin-right: 10px;
 }
+
+#todolist{
+    border-left: 1px solid;
+}
+
+#features {
+    border-right: 1px solid;
+}
+
+.navitem{
+    text-decoration: none;
+    color: white;
+}
