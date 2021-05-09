@@ -21,14 +21,10 @@
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-dark bg-dark justify-content-end">
+    <nav class="navbar navbar-dark bg-dark">
         <!-- Navbar content -->
+        <a href="#" class="navbar-brand "><img src="{{url_for('static', filename='taskify4.png')}}" alt="" width="120" height="35"></a>
         <ul class="nav nav-pills nav-fill">
-          <li class="nav-brand">
-            <a class="navbar-brand" href="#">
-              <img src="{{url_for('static', filename='taskifylogo2.png')}}" alt="" width="50" height="30">
-            </a>
-          </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link active" id="logout" href="/logout">Log Out</a>
