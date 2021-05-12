@@ -5,7 +5,7 @@
         <!-- Side navigation -->
         <div class="sidenav">
             <a href="#">Home</a>
-            <a href="#">CRUD</a>
+            <a href="/scrum">SCRUM Board</a>
             <a href="#"></a>
             <a href="#"></a>
         </div>
@@ -13,24 +13,19 @@
     <div class="col-sm-7">
         <br>
         <h3>Notes</h3>
-        <div class="Notes">
-            <form method="POST">
-                <textarea name="notes" id="notes" class="form-control"></textarea>
-                <br>
-                <button type="submit" class="btn btn-primary">Add</button>
-            </form>
-        </div>
+
     </div>
-    <div class="col-sm-3 row-fluid" id="todolist">
+    <div class="col-sm-3" id="todolist">
         <br>
-        <h3>ToDo List</h3>
-        <div class="todoform">
-            <form method="POST">
-                <textarea name="todo" id="todo" class="form-control"></textarea>
-                <br>
-                <button type="submit" class="btn btn-primary">Add</button>
-            </form>       
+        <div class="todocontainer">
+            <h3>ToDo List</h3>
+            <div class="form-group w-75">
+                <form method="POST">
+                    <input name="todo" id="todo" class="form-control"></input>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>       
+            </div>
         </div>
-    </div>
 </div>
 {% endblock %}

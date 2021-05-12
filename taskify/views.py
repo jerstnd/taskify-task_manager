@@ -17,3 +17,8 @@ def home():
         lists = request.form.get('todo')
         notes = request.form.get('notes')
     return render_template('home.html', user=current_user)
+
+@views.route('/scrum')
+@login_required
+def scrum():
+    return render_template('scrum.html', user=current_user)
