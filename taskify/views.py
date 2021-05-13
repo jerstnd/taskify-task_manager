@@ -1,5 +1,8 @@
+from .models import ToDo
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user, login_manager
+from . import db
+
 
 views = Blueprint('views', __name__)
 
@@ -14,11 +17,16 @@ def landing_page():
 @login_required
 def home():
     if request.method == 'POST':
-        lists = request.form.get('todo')
-        notes = request.form.get('notes')
+        todo = request.form.get('todo')
+        #notes = request.form.get('notes')    
+
+        new_todo = ToDo(todo_list=todo, user_id=current_user.id)
+        db.session.add(new_todo)
+        db.session.commit()
+
     return render_template('home.html', user=current_user)
 
-@views.route('/scrum')
+@views.route('/kanban')
 @login_required
-def scrum():
-    return render_template('scrum.html', user=current_user)
+def kanban():
+    return render_template('kanban.html', user=current_user)

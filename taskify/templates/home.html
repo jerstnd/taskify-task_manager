@@ -5,7 +5,7 @@
         <!-- Side navigation -->
         <div class="sidenav">
             <a href="#">Home</a>
-            <a href="/scrum">SCRUM Board</a>
+            <a href="/kanban">Kanban Board</a>
             <a href="#"></a>
             <a href="#"></a>
         </div>
@@ -21,11 +21,13 @@
             <h3>ToDo List</h3>
             <div class="form-group w-75">
                 <form method="POST" class="todoform">
-                    <input name="todo" id="todo" class="form-control"></input>
+                    <input name="todo" id="todo" class="form-control" autocomplete="off"></input>
                     <button type="submit" class="btn btn-primary">&#43;</button>
                 </form>    
-                
             </div>
+            {% for todo in user.todo %}
+                <p>{{ todo.todo_list }}</p>
+            {% endfor %}
         </div>
 </div>
 {% endblock %}
