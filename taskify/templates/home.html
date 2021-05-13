@@ -6,7 +6,7 @@
         <div class="sidenav">
             <a href="#">Home</a>
             <a href="/kanban">Kanban Board</a>
-            <a href="#"></a>
+            <a href="/calendar">Calendar</a>
             <a href="#"></a>
         </div>
     </div>
@@ -25,9 +25,6 @@
                     <button type="submit" class="btn btn-primary">&#43;</button>
                 </form>    
             </div>
-            {% for todo in user.todo %}
-                <p>{{ todo.todo_list }}</p>
-            {% endfor %}
         </div>
 </div>
 {% endblock %}

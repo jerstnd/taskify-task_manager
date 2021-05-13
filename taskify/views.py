@@ -30,3 +30,19 @@ def home():
 @login_required
 def kanban():
     return render_template('kanban.html', user=current_user)
+
+@views.route('/calendar')
+@login_required
+def calendar():
+    events = [
+        {
+            'todo' : "testing",
+            'date' : "2021-05-14"
+        },
+        {
+            'todo' : 'eat',
+            'date' : '2021-05-15'
+        }
+    ]
+
+    return render_template('calendar.html', user=current_user, events=events)
