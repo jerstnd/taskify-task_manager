@@ -40,7 +40,7 @@ def calendar():
             'date' : "2021-05-14"
         },
         {
-            'todo' : 'eat',
+            'todo' : 'testing',
             'date' : '2021-05-15'
         }
     ]
